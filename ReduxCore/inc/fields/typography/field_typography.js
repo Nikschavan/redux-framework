@@ -146,19 +146,20 @@
 
                                 // output data to drop down
                                 data = buildData;
-                                
                                 var default_params2, placeholder;
                                 default_params2 = default_params;
                                 placeholder = $( this ).find( ".redux-typography-family" ).attr('placeholder');
                                 var val = $( this ).find( ".redux-typography-family" ).attr('data-value');
                                 //console.log(placeholder);  
                                 //var default_params2 = default_params;
-                                default_params2['data'] = data;
-                                default_params2['placeholder'] = placeholder;
-                                default_params2['allowClear'] = fontClear;
+                                console.log( default_params );
+                                console.log( default_params2 );
+                                default_params2.data = data;
+                                default_params2.placeholder = placeholder;
+                                default_params2.allowClear = fontClear;
 
                                 $( this ).find( ".redux-typography-family" ).select2(default_params2);
-                                default_params2['data'] = null;
+                                default_params2.data = null;
                                 
                                 $( this ).find( ".redux-typography-family" ).val(val).trigger('change');
                                 
@@ -166,29 +167,29 @@
                                 if ( !xx.hasClass( 'redux-typography-family' ) ) {
                                     
                                     placeholder = $(this).find( ".redux-typography-align" ).attr('placeholder');
-                                    default_params2['placeholder'] = placeholder;
+                                    default_params2.placeholder = placeholder;
                                     el.find( ".redux-typography-style" ).select2( default_params2 );
                                    
                                 }
                                 
                                 placeholder = $(this).find( ".redux-typography-align" ).attr('placeholder');
-                                default_params2['placeholder'] = placeholder;
+                                default_params2.placeholder = placeholder;
                                 $(this).find( ".redux-typography-align" ).select2( default_params2 );
                                 
                                 placeholder = $(this).find( ".redux-typography-family-backup" ).attr('placeholder');
-                                default_params2['placeholder'] = placeholder;
+                                default_params2.placeholder = placeholder;
                                 $(this).find( ".redux-typography-family-backup" ).select2( default_params2 );
                                 
                                 placeholder = $(this).find( ".redux-typography-transform" ).attr('placeholder');
-                                default_params2['placeholder'] = placeholder;
+                                default_params2.placeholder = placeholder;
                                 $(this).find( ".redux-typography-transform" ).select2( default_params2 );
                                 
                                 placeholder = $(this).find( ".redux-typography-font-variant" ).attr('placeholder');
-                                default_params2['placeholder'] = placeholder;
+                                default_params2.placeholder = placeholder;
                                 $(this).find( ".redux-typography-font-variant" ).select2( default_params2 );
                                 
                                 placeholder = $(this).find( ".redux-typography-decoration" ).attr('placeholder');
-                                default_params2['placeholder'] = placeholder;
+                                default_params2.placeholder = placeholder;
                                 $(this).find( ".redux-typography-decoration" ).select2( default_params2 );
                                 
                                 redux.field_objects.typography.select( family, true, false, null, true );
@@ -450,7 +451,7 @@
         var details = '';
         if ( google === true && ( family in redux.fonts.google) ) {
             details = redux.fonts.google[family];
-            console.log('details '+details);
+            // console.log('details '+details);
         } else {
             details = {
                 '400': 'Normal 400',
@@ -500,12 +501,12 @@
                 
                 var placeholder = $( '#' + mainID + ' .redux-typography-style' ).attr('placeholder');
                 var default_params2 = default_params;                
-                default_params2['placeholder'] = placeholder;
+                default_params2.placeholder = placeholder;
 
                 // Init select2
                 $( '#' + mainID + ' .redux-typography-style' ).select2( default_params2 );
                 
-                default_params2['placeholder'] = null;
+                default_params2.placeholder = null;
 
                 // SUBSETS
                 selected = "";
@@ -539,12 +540,12 @@
                 
                 placeholder = $( '#' + mainID + ' .redux-typography-subsets' ).attr('placeholder');
                 var default_params2 = default_params;                
-                default_params2['placeholder'] = placeholder;
+                default_params2.placeholder = placeholder;
                 
                 // Init select2
                 $( '#' + mainID + ' .redux-typography-subsets' ).select2( default_params2 );
                 
-                default_params2['placeholder'] = null;
+                default_params2.placeholder = null;
 
                 $( '#' + mainID + ' .redux-typography-subsets' ).parent().fadeIn( 'fast' );
                 $( '#' + mainID + ' .typography-family-backup' ).fadeIn( 'fast' );
@@ -574,12 +575,12 @@
 
                     placeholder = $( '#' + mainID + ' .redux-typography-style' ).attr('placeholder');
                     var default_params2 = default_params;                
-                    default_params2['placeholder'] = placeholder;
+                    default_params2.placeholder = placeholder;
                     
                     // Init select2
                     $( '#' + mainID + ' .redux-typography-style' ).select2( default_params2 );
                     
-                    default_params2['placeholder'] = null;
+                    default_params2.placeholder = null;
 
                     // Prettify things
                     $( '#' + mainID + ' .redux-typography-subsets' ).parent().fadeOut( 'fast' );
