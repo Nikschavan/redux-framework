@@ -150,10 +150,7 @@
                                 default_params2 = default_params;
                                 placeholder = $( this ).find( ".redux-typography-family" ).attr('placeholder');
                                 var val = $( this ).find( ".redux-typography-family" ).attr('data-value');
-                                //console.log(placeholder);  
                                 //var default_params2 = default_params;
-                                console.log( default_params );
-                                console.log( default_params2 );
                                 default_params2.data = data;
                                 default_params2.placeholder = placeholder;
                                 default_params2.allowClear = fontClear;
@@ -382,9 +379,7 @@
         var parent = $( selector ).parents( '.redux-container-typography:first' );
         var data = [];
         //$.each(parent.find('.redux-typography-field'), function() {
-        //    console.log();
         //});
-        //console.log( selector );
         // Set all the variables to be checked against
         var family = $( '#' + mainID + '-family' ).val();
 
@@ -409,8 +404,6 @@
         var script = $( '#' + mainID + ' select.redux-typography-subsets' ).val();
         var color = $( '#' + mainID + ' .redux-typography-color' ).val();
         var units = $( '#' + mainID ).data( 'units' );
-        //console.log('here3');
-        //console.log(color);
 
         //var output = family;
         
@@ -451,7 +444,6 @@
         var details = '';
         if ( google === true && ( family in redux.fonts.google) ) {
             details = redux.fonts.google[family];
-            // console.log('details '+details);
         } else {
             details = {
                 '400': 'Normal 400',
@@ -647,7 +639,6 @@
             }
         }
         
-        //console.log(style);
         
         // Weight and italic
         if ( style.indexOf( "italic" ) !== -1 ) {
@@ -691,7 +682,6 @@
         
         // Show more preview stuff
         if ( $( '#' + mainID ).hasClass( 'typography-initialized' ) ) {
-            //console.log('here2');
             var isPreviewSize = $( '#' + mainID + ' .typography-preview' ).data( 'preview-size' );
 
             if ( isPreviewSize == '0' ) {
