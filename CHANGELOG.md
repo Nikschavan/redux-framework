@@ -1,8 +1,58 @@
 # Redux Framework Changelog
 
-## 3.5.9.7  #2880 - More issues with the extensions_url routine.
+## 3.6.0.10
+* Fixed:    #3051 - Color_RBGA field RGBA value outputting zeros when color is left blank.
 
-## 3.5.9.6  #2876 - Fixing more unvetted user contributions.
+## 3.6.0.9
+* Fixed:    #3048 - Subsection tabs not including specified section class name.
+
+## 3.6.0.8
+* Fixed:    Incorrect string comparison result in admin link check.  Thanks @ksere.
+* Fixed:    Check value exists before validating when used with Metabox extension.  Thanks @Enchiridion
+
+
+## 3.6.0.7
+* Fixed:    Empty values not passing to validation_callback.
+
+
+## 3.6.0.6
+* Fixed:    Javascript error in customizer javascript, preventing save of changed options.
+* Fixed:    #3019 - Section descriptions incorrect when opt_name contains digits.
+
+## 3.6.0.5
+* Reverted: Changes to typography.  The on input variable solution was not working.
+* Fixed:    Support URL has generator was failing with an error.
+
+## 3.6.0.4
+* Changed:  Typography field is now only ONE input variable. Should reduce our 
+            max_input_vars errors dramatically.
+
+## 3.6.0.3
+* Fixed:    Some XSS vulnerabilities only available in the backend when authenticated as a user.
+
+## 3.6.0.2
+* Fixed:    Customizer.min.js compression issue. Deploy.
+
+## 3.6.0.1
+* Fixed     Outdated redux.min.js on wp.org causing option panel failure.
+* Fixed:    #2936 - Border field outputting px with blank value.
+* Fixed:    Resolved Theme-Check php shortcode false notice.
+* Modified: No more major redirect for the Redux page, only on first install with the plugin.
+* Fixed:    IE11 bug in the customizer. Thanks @anikitas!
+
+## 3.6.0    
+* Fixed:     Fixed Customizer path issues
+* Added:     Added new default arguments filter by opt_name and type.  :)
+* Notice:    WP.org release
+
+## 3.5.9.8  
+* Fixed:    #2903 - False positive flag in border field JS.  Avast doesn't like empty document ready statements.
+
+## 3.5.9.7  
+* Fixed:    #2880 - More issues with the extensions_url routine.
+
+## 3.5.9.6  
+* Fixed:    #2876 - Fixing more unvetted user contributions.
 
 ## 3.5.9.5
 * Modified: #2855 - Extensions now have a helper class to help composer-based installs. Thanks @2ndkauboy!

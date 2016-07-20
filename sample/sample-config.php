@@ -34,7 +34,7 @@
     $sample_patterns_path = ReduxFramework::$_dir . '../sample/patterns/';
     $sample_patterns_url  = ReduxFramework::$_url . '../sample/patterns/';
     $sample_patterns      = array();
-
+    
     if ( is_dir( $sample_patterns_path ) ) {
 
         if ( $sample_patterns_dir = opendir( $sample_patterns_path ) ) {
@@ -2306,13 +2306,13 @@
             $return['value'] = $value;
 
             if ( $error == true ) {
-                $return['error'] = $field;
                 $field['msg']    = 'your custom error message';
+                $return['error'] = $field;
             }
 
             if ( $warning == true ) {
-                $return['warning'] = $field;
                 $field['msg']      = 'your custom warning message';
+                $return['warning'] = $field;
             }
 
             return $return;
